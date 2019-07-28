@@ -3,7 +3,7 @@
  *
  * [4] Median of Two Sorted Arrays
  */
-
+#include <stdio.h>
 
 double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Size){
     if(nums1Size > nums2Size){
@@ -53,7 +53,7 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
                 }
                 median = (double)(min_right + max_left) / 2.0;
                 break;
-                    //return median;
+                //return median;
             }
             else {
                 median = (double)max_left;
@@ -63,5 +63,15 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
         }
     }
     return median;
+}
+
+int main(){
+    int nums1[] = {1, 2};
+    int nums2[] = {3, 4};
+    int nums1Size = 2;
+    int nums2Size = 2;
+    double retval = findMedianSortedArrays(nums1, nums1Size, nums2, nums2Size);
+    printf("%f\n", retval);
+    return 0;
 }
 
