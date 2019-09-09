@@ -9,11 +9,9 @@ bool isValidSudoku(char** board, int boardSize, int* boardColSize){
     for(int i = 0; i < boardSize; i++)
     {
         char checkrow[boardSize];
-        char checkcol[boardSize];
         for(int i = 0; i < boardSize; i++)
         {
             checkrow[i] = '0';
-            checkcol[i] = '0';
         }
         for(int j = 0; j < boardSize; j++)
         {
@@ -33,11 +31,9 @@ bool isValidSudoku(char** board, int boardSize, int* boardColSize){
     }
     for(int i = 0; i < boardSize; i++)
     {
-        char checkrow[boardSize];
         char checkcol[boardSize];
         for(int i = 0; i < boardSize; i++)
         {
-            checkrow[i] = '0';
             checkcol[i] = '0';
         }
         for(int j = 0; j < boardSize; j++)
